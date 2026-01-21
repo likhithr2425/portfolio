@@ -1,56 +1,45 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import React from "react"
+import type { Metadata } from 'next'
+import { JetBrains_Mono } from 'next/font/google'
+import { Analytics } from '@vercel/analytics/next'
+import './globals.css'
 
-import "./globals.css";
-import { Navbar } from "./components/navbar/Index";
-
-
-const inter = Inter({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800", "900"],
-})
+const _jetbrainsMono = JetBrains_Mono({ subsets: ["latin"], weight: ["400", "500", "600", "700"] });
 
 export const metadata: Metadata = {
-  title: {
-    default: "Likhith Reddy | Software Engineer",
-    template: "%s | Likhith Reddy",
+  title: 'Likhith - SDE at Amazon | Full-Stack Developer',
+  description: 'Portfolio of Likhith, a Software Development Engineer at Amazon. Explore my work, experience, and projects in full-stack development.',
+  generator: 'v0.app',
+  icons: {
+    icon: [
+      {
+        url: '/icon-light-32x32.png',
+        media: '(prefers-color-scheme: light)',
+      },
+      {
+        url: '/icon-dark-32x32.png',
+        media: '(prefers-color-scheme: dark)',
+      },
+      {
+        url: '/icon.svg',
+        type: 'image/svg+xml',
+      },
+    ],
+    apple: '/apple-icon.png',
   },
-  description: "Full-stack developer building scalable web & mobile products",
-  keywords: [
-    "Likhith Reddy",
-    "Software Engineer",
-    "Full Stack Developer",
-    "Next.js",
-    "React",
-    "Portfolio",
-  ],
-  authors: [{ name: "Likhith Reddy" }],
-  creator: "Likhith Reddy",
-
-  openGraph: {
-    title: "Likhith Reddy | Portfolio",
-    description: "Engineer building production-grade systems & startups",
-    url: "https://likhithr.in",
-    siteName: "Likhith Reddy Portfolio",
-    locale: "en_US",
-    type: "website",
-  },
-  metadataBase: new URL("https://likhithr.in"),
-};
+}
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${inter.className} antialiased bg-neutral-100 dark:bg-neutral-700`}
-      >
-        <Navbar/>
+    <html lang="en" className="scroll-smooth dark">
+      <body className={`font-sans antialiased bg-background text-foreground`}>
         {children}
+        <Analytics />
       </body>
     </html>
-  );
+  )
 }
