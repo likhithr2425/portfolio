@@ -18,7 +18,7 @@ export function Contact() {
     },
     {
       name: 'Email',
-      url: 'mailto:likhithreddy.dev@gmail.com',
+      url: 'mailto:likhithr.2425@gmail.com',
       icon: Mail,
     },
   ]

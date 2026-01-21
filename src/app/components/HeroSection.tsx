@@ -115,7 +115,7 @@ export function HeroSection() {
           </a>
 
           <a
-            href="mailto:likhithreddy.dev@gmail.com"
+            href="mailto:likhithr.2425@gmail.com"
             className="group flex items-center gap-2 px-6 py-3 bg-accent hover:bg-accent/90 text-accent-foreground transition-all duration-300 transform hover:scale-105"
           >
             <Mail size={20} />
