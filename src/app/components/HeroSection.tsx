@@ -3,8 +3,7 @@
 import { useEffect, useRef } from 'react'
 import { motion } from 'framer-motion'
 import gsap from 'gsap'
-import { CharacterModel } from './CharacterModel'
-import { Github, Linkedin, Mail, ExternalLink } from 'lucide-react'
+import { Github, Mail, ExternalLink } from 'lucide-react'
 
 export function HeroSection() {
   const titleRef = useRef<HTMLDivElement>(null)
@@ -132,9 +131,6 @@ export function HeroSection() {
         transition={{ duration: 0.8 }}
         className="relative z-5 flex-1 h-full hidden lg:flex items-center justify-center"
       >
-        <div className="relative w-full h-full max-w-xl">
-          <CharacterModel />
-        </div>
       </motion.div>
 
       {/* Scroll Indicator */}
